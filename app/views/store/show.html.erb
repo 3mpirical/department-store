@@ -1,0 +1,13 @@
+<h1>Selected Store</h1>
+
+<h2><%= @store.name %></h2>
+
+<ul>
+    <li>Slogan: <%= @store.description %></li>
+    <li>Opened: <%= @store.year_opened %></li>
+    <li>Inventory: <%= @store.inventory %></li>
+</ul>
+
+<%= link_to "items", store_item_index_path(@store.id) %>
+<%= link_to "edit", edit_store_path(@store.id) %>
+<%= link_to "delete", @store , method: :delete %>

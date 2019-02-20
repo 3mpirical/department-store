@@ -1,0 +1,8 @@
+<h1>All Stores</h1>
+
+<% @stores.each() do |item| %>
+    <hr>
+    <h3><%= item.name %></h3>
+    <%= link_to "see more", store_path(item.id) %>
+
+<% end %>
