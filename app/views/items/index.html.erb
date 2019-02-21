@@ -1,6 +1,9 @@
 <h1>Items in <%= @store.name %></h1>
 
+<h2>Items:</h2>
+<hr>
 <%= link_to "Add New Item", new_store_item_path(@store.id) %>
+<hr>
 
 <ul>
     <% @items.each() do |item| %>

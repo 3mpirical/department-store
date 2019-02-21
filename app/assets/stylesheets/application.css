@@ -37,3 +37,9 @@ form {
     width: 20rem;
     margin: auto;
 }
+
+hr {
+    margin: 1rem auto;
+    width: 50%;
+    border: 0.5px solid rgba(0,0,0,0.1);
+}
