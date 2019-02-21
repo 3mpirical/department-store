@@ -1,2 +1,15 @@
-<h1>Items#edit</h1>
-<p>Find me in app/views/items/edit.html.erb</p>
+<h1>Edit New Item</h1>
+
+<p>Change the things in the database</p>
+
+<%= form_tag("/stores/" + @store.id.to_s + "/items/" +@item.id.to_s , method: "put") do %>
+  <%= label_tag(:name, "Name") %>
+  <%= text_field_tag(:name, @item.name) %>
+
+  <%= label_tag(:cost, "Cost") %>
+  <%= text_field_tag(:cost, @item.cost) %>
+
+  <%= submit_tag("Submit") %>
+<% end %>
+
+<%= link_to "back", store_item_path(@store.id, @item.id) %>

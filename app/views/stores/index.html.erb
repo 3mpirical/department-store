@@ -1,5 +1,7 @@
 <h1>All Stores</h1>
 
+<%= link_to "Make A New Store!", new_store_path %>
+
 <% @stores.each() do |item| %>
     <hr>
     <h3><%= item.name %></h3>

@@ -8,6 +8,7 @@
     <li>Inventory: <%= @store.inventory %></li>
 </ul>
 
-<%= link_to "items", store_item_index_path(@store.id) %>
+<%= link_to "back", stores_path %>
+<%= link_to "items", store_items_path(@store.id) %>
 <%= link_to "edit", edit_store_path(@store.id) %>
 <%= link_to "delete", @store , method: :delete %>

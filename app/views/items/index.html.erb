@@ -1,2 +1,12 @@
-<h1>Items#index</h1>
-<p>Find me in app/views/items/index.html.erb</p>
+<h1>Items in <%= @store.name %></h1>
+
+<%= link_to "Add New Item", new_store_item_path(@store.id) %>
+
+<ul>
+    <% @items.each() do |item| %>
+    <li><%= item.name %></li>
+    <%= link_to "see cost", store_item_path(@store.id, item.id) %>
+    <% end %>
+</ul>
+
+<%= link_to "back", store_path(@store.id) %>

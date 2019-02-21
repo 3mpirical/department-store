@@ -29,3 +29,11 @@ body {
  html {
     font-size: 62.5%
 }
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    margin: auto;
+}

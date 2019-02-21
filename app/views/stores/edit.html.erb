@@ -1,0 +1,20 @@
+
+<h1>Edit Store</h1>
+
+<%= form_for @store do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+
+    <%= f.label :year_opened %>
+    <%= f.text_field :year_opened %>
+
+    <%= f.label :inventory %>
+    <%= f.text_field :inventory %>
+
+    <%= f.submit %>
+<% end %>
+
+<%= link_to "back", store_path(@store.id) %>

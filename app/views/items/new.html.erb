@@ -1,2 +1,20 @@
-<h1>Items#new</h1>
-<p>Find me in app/views/items/new.html.erb</p>
+<h1>Add New Item</h1>
+
+<p>Put all the things in the database</p>
+
+
+
+<%= form_tag("/stores/" + @store.id.to_s + "/items", method: "post") do %>
+  <%= label_tag(:name, "Name") %>
+  <%= text_field_tag(:name) %>
+
+  <%= label_tag(:cost, "Cost") %>
+  <%= text_field_tag(:cost) %>
+
+  <%= submit_tag("Submit") %>
+<% end %>
+
+<%= link_to "back", store_items_path(@store.id) %>
+
+
+
